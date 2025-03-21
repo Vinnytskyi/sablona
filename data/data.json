@@ -1,0 +1,17 @@
+{
+    "text_banner": {
+      "banner1.jpg": "Prvý nadpis",
+      "banner2.jpg": "Druhý nadpis",
+      "banner3.jpg": "Tretí nadpis"
+    },
+    "otazky": [
+      "Ako môžem vytvoriť účet?",
+      "Aké sú možnosti platby?",
+      "Ako môžem kontaktovať podporu?"
+    ],
+    "odpovede": [
+      "Účet si môžete vytvoriť kliknutím na tlačidlo 'Registrovať' v pravom hornom rohu.",
+      "Podporujeme platbu kartou, bankovým prevodom a PayPal.",
+      "Kontaktovať podporu môžete cez e-mail alebo live chat na našej stránke."
+    ]
+  }  
