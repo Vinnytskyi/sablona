@@ -1,15 +1,12 @@
-function generateSlides($dir) {
-    $files = glob($dir . "/*.jpg");
-    $json = file_get_contents("data/datas.json");
-    $data = json_decode($json, true);
-    $text = $data["text_banner"];
-    foreach ($files as $file) {
-        echo '<div class="slide fade">';
-        echo '<img src="' . $file . '">';
-        echo '<div class="slide-text">';
-        echo ($text[basename($file)]); 
-        echo '</div>';
-        echo '</div>';
+<?php
+function loadQnA() {
+    $json = file_get_contents("data/data.json");
+        $data = json_decode($json, true);
+    if (isset($data["otazky"]) && isset($data["odpovede"])) {
+        $otazky = $data["otazky"];
+        $odpovede = $data["odpovede"];
+        return array($otazky, $odpovede);
     }
+    
+    return null; 
 }
-?>
