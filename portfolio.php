@@ -57,7 +57,22 @@
             </div>
         </section>
   </main>
-
+  <section class="container">
+      <?php if ($otazky && $odpovede): ?>
+        <?php for ($i = 0; $i < count($otazky); $i++): ?>
+          <div class="accordion">
+            <div class="question">
+              <?php echo htmlspecialchars($otazky[$i]); ?>
+            </div>
+            <div class="answer">
+              <?php echo htmlspecialchars($odpovede[$i]); ?>
+            </div>
+          </div>
+        <?php endfor; ?>
+      <?php else: ?>
+        <p>Nie sú dostupné žiadne otázky a odpovede.</p>
+      <?php endif; ?>
+    </section>
     </main>
     
     <?php include 'footer.php'; ?>
