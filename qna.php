@@ -32,6 +32,20 @@ list($otazky, $odpovede) = loadQnA();
           <p><strong><em>Elit culpa id mollit irure sit. Ex ut et ea esse culpa officia ea incididunt elit velit veniam qui. Mollit deserunt culpa incididunt laborum commodo in culpa.</em></strong></p>
         </div>
       </div>
+
+      <div class="gna-section">
+        <ul>
+          <?php
+          if ($otazky && $odpovede) {
+              for ($i = 0; $i < count($otazky); $i++) {
+                  echo "<li><strong>Otázka:</strong> " . htmlspecialchars($otazky[$i]) . "<br><strong>Odpovedať:</strong> " . htmlspecialchars($odpovede[$i]) . "</li><br>";
+              }
+          } else {
+              echo "<li>Nie sú k dispozícii žiadne otázky a odpovede.</li>";
+          }
+          ?>
+        </ul>
+      </div>
     </section>
   </main>
 
@@ -41,5 +55,3 @@ list($otazky, $odpovede) = loadQnA();
   <script src="js/menu.js"></script>
 </body>
 </html>
-
-
