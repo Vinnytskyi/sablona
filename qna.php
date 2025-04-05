@@ -1,6 +1,8 @@
 <?php
-include('function.php');
-list($otazky, $odpovede) = loadQnA();
+require_once 'QnA1.php';
+
+$qna = new QnA1();
+list($otazky, $odpovede) = $qna->loadQnA();
 ?>
 
 <!DOCTYPE html>
