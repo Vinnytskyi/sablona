@@ -1,5 +1,6 @@
 <?php
 require_once 'QnA1.php';
+use App\QnA1;
 
 $qna = new QnA1();
 list($otazky, $odpovede) = $qna->loadQnA();
